@@ -1,5 +1,6 @@
 "use client";
 import Slider from "./Slider.tsx";
+import Flower from "./Flower.tsx";
 
 import { useState } from "react";
 import {
@@ -14,7 +15,6 @@ import {
   ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
-import Flower from "./flower.tsx";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
