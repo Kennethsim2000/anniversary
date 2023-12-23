@@ -24,19 +24,19 @@ const Slider = () => {
   return (
     <div ref={sliderRef} className="keen-slider">
       <div className="keen-slider__slide ">
-        <img src="/images/Photo1.jpg" alt="Photo 1" />
+        <img src="/images/photo1.jpg" alt="Photo 1" />
       </div>
       <div className="keen-slider__slide ">
-        <img src="/images/Photo2.jpg" alt="Photo 1" />
+        <img src="/images/photo2.jpg" alt="Photo 1" />
       </div>
       <div className="keen-slider__slide ">
-        <img src="/images/Photo3.jpg" alt="Photo 1" />
+        <img src="/images/photo3.jpg" alt="Photo 1" />
       </div>
       <div className="keen-slider__slide ">
-        <img src="/images/Photo4.jpg" alt="Photo 1" />
+        <img src="/images/photo4.jpg" alt="Photo 1" />
       </div>
       <div className="keen-slider__slide ">
-        <img src="/images/Photo5.jpg" alt="Photo 1" />
+        <img src="/images/photo5.jpg" alt="Photo 1" />
       </div>
       <div className="keen-slider__slide ">
         <img src="/images/Photo100.jpg" alt="Photo 1" />
