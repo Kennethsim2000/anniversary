@@ -1,10 +1,24 @@
 "use client";
 import Slider from "./Slider.tsx";
+
 import { useState } from "react";
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import {
+  Button,
+  ButtonGroup,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  useDisclosure,
+} from "@chakra-ui/react";
+import Flower from "./flower.tsx";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handlePlay = () => {
     setIsPlaying(true);
@@ -17,7 +31,9 @@ export default function Home() {
         <Button colorScheme="blackAlpha" onClick={handlePlay}>
           Play
         </Button>
-        <Button colorScheme="gray">Surprise</Button>
+        <Button colorScheme="gray" onClick={onOpen}>
+          Surprise
+        </Button>
       </ButtonGroup>
       {/* <button onClick={handlePlay}>Play</button> */}
       {isPlaying && (
@@ -26,6 +42,12 @@ export default function Home() {
           Your browser does not support the audio tag.
         </audio>
       )}
+      <Modal onClose={onClose} isOpen={isOpen} isCentered>
+        <ModalOverlay />
+        <ModalContent>
+          <Flower />
+        </ModalContent>
+      </Modal>
     </main>
   );
 }
